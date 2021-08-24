@@ -10,12 +10,12 @@ const Tareas = require('./models/tareas');
 
 
 const main = async() => {
-    console.log( 'Hola Mundo' );
 
     let opt = '';
     const tareas = new Tareas();
 
     do {
+        // Imprimir el menú
         opt = await inquirerMenu();
         
         switch (opt) {
@@ -26,7 +26,7 @@ const main = async() => {
                 break;
         
             case '2':
-                console.log( tareas._listado );
+                console.log( tareas.listadoArr );
                 break;
         }
         
